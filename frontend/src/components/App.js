@@ -2,7 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <h1>Working</h1>
+    </div>
+  );
 };
 
 export default App;
