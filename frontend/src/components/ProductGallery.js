@@ -10,6 +10,7 @@ import React from 'react';
 import useStyles from '../styles';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import BackButton from './BackButton';
 
 const ProductGallery = () => {
   const { headingID } = useParams();
@@ -34,6 +35,7 @@ const ProductGallery = () => {
 
   return (
     <>
+      <BackButton to="/" />
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
           {products.length > 0 ? (
@@ -46,20 +48,10 @@ const ProductGallery = () => {
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
-                    <Typography
-                      guttterBottom
-                      variant="h5"
-                      align="center"
-                    >
+                    <Typography variant="h5" align="center">
                       {product.name}
                     </Typography>
-                  </CardContent>
-                  <CardContent className={classes.cardContent}>
-                    <Typography
-                      guttterBottom
-                      variant="h7"
-                      align="center"
-                    >
+                    <Typography variant="h7" align="center">
                       £{product.price}
                     </Typography>
                   </CardContent>
@@ -67,7 +59,7 @@ const ProductGallery = () => {
               </Grid>
             ))
           ) : (
-            <p> NO items</p>
+            <p> No items </p>
           )}
         </Grid>
       </Container>

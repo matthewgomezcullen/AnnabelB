@@ -39,7 +39,10 @@ const HeadingGallery = () => {
                 to={`/heading/${heading.id}`}
                 className={classes.headingLink}
               >
-                <Card className={classes.card} variant="outlined">
+                <Card
+                  className={`${classes.card} ${classes.clickable}`}
+                  variant="outlined"
+                >
                   <CardMedia
                     className={classes.cardMedia}
                     image={heading.image}

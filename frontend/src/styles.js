@@ -1,45 +1,74 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  header: {
-    backgroundColor: 'white',
-    height: '150px',
-    padding: theme.spacing(5, 0, 6),
-    width: 'xl',
+  backBtn: {
+    left: '20px',
+    top: '20px',
   },
-  title: {
-    color: 'steelblue',
-  },
-  cardGrid: {
-    color: theme.palette.background.paper,
-    padding: '20px 20px',
-  },
-  headingLink: {
-    textDecoration: 'none',
+  bio: {
+    backgroundColor: 'steelblue',
+    padding: theme.spacing(1, 2, 1),
   },
   card: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    '&:hover': {
-      borderColor: 'steelblue',
-    },
-  },
-  cardMedia: {
-    paddingTop: '56.25%',
   },
   cardContent: {
     '&:last-child': {
       paddingBottom: 0,
     },
   },
-  bio: {
-    backgroundColor: 'steelblue',
-    padding: theme.spacing(1, 2, 1),
+  cardGrid: {
+    color: theme.palette.background.paper,
+    padding: '20px 20px',
+  },
+  cardMedia: {
+    paddingTop: '90%',
+  },
+  clickable: {
+    '&:hover': {
+      borderColor: 'steelblue',
+    },
+  },
+  container: {
+    root: {
+      padding: '0',
+    },
+  },
+  email: {
+    typography: {
+      fontFamily: ['Bradley Hand', 'cursive'],
+    },
+  },
+  header: {
+    backgroundColor: 'white',
+    height: '150px',
+    padding: theme.spacing(5, 0, 6),
+    width: 'xl',
+  },
+  headingLink: {
+    textDecoration: 'none',
   },
   paragraph: {
     color: 'white',
     padding: '16px',
+  },
+  picture: {
+    width: '100%',
+  },
+  profilePicture: {
+    position: 'fixed',
+    bottom: '10px',
+    left: '10px',
+    height: '278px',
+    width: '250px',
+  },
+  subtitle: {
+    color: '#B0C4DE',
+  },
+  title: {
+    color: 'steelblue',
   },
 }));
 

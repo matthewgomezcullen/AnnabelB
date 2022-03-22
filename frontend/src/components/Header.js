@@ -23,7 +23,14 @@ const Header = () => {
           align="center"
           className={classes.title}
         >
-          Annabel B.
+          annabel b.
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          className={classes.subtitle}
+        >
+          Authentic Jewellery
         </Typography>
       </Container>
     </>

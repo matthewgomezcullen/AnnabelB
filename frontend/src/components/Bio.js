@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from '@material-ui/core';
 import React from 'react';
 import useStyles from '../styles';
+import ProfilePicture from './ProfilePicture';
 
 const Bio = () => {
   const classes = useStyles();
@@ -16,12 +17,14 @@ const Bio = () => {
   return (
     <>
       <ProfilePicture />
-      <Container className={classes.bio} maxWidth="md">
-        {paragraphs.map((paragraph) => (
-          <Typography className={classes.paragraph} align="center">
-            {paragraph}
-          </Typography>
-        ))}
+      <Container maxWidth="md" disableGutters="true">
+        <Box sx={{ borderRadius: 6 }} className={classes.bio}>
+          {paragraphs.map((paragraph) => (
+            <Typography className={classes.paragraph} align="center">
+              {paragraph}
+            </Typography>
+          ))}
+        </Box>
       </Container>
     </>
   );
