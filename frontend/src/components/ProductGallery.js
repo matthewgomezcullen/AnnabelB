@@ -54,6 +54,7 @@ const ProductGallery = () => {
                     <Typography variant="h7" align="center">
                       £{product.price}
                     </Typography>
+                    <Typography>{product.details}</Typography>
                   </CardContent>
                 </Card>
               </Grid>

@@ -18,7 +18,11 @@ const Bio = () => {
     <>
       <ProfilePicture />
       <Container maxWidth="md" disableGutters="true">
-        <Box sx={{ borderRadius: 6 }} className={classes.bio}>
+        <Box
+          sx={{ borderRadius: 6 }}
+          className={classes.bio}
+          bgcolor="secondary.main"
+        >
           {paragraphs.map((paragraph) => (
             <Typography className={classes.paragraph} align="center">
               {paragraph}

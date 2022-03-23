@@ -8,7 +8,7 @@ import React from 'react';
 
 import useStyles from '../styles';
 
-const Header = () => {
+const Header = ({ theme }) => {
   const classes = useStyles();
 
   return (
@@ -22,6 +22,7 @@ const Header = () => {
           variant="h2"
           align="center"
           className={classes.title}
+          color="primary"
         >
           annabel b.
         </Typography>
@@ -29,8 +30,9 @@ const Header = () => {
           variant="subtitle1"
           align="center"
           className={classes.subtitle}
+          color="secondary"
         >
-          Authentic Jewellery
+          Bespoke Handmade Jewellery
         </Typography>
       </Container>
     </>

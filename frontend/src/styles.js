@@ -6,7 +6,6 @@ const useStyles = makeStyles((theme) => ({
     top: '20px',
   },
   bio: {
-    backgroundColor: 'steelblue',
     padding: theme.spacing(1, 2, 1),
   },
   card: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     '&:last-child': {
-      paddingBottom: 0,
+      paddingBottom: '16px !important',
     },
   },
   cardGrid: {
@@ -24,11 +23,11 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px 20px',
   },
   cardMedia: {
-    paddingTop: '90%',
+    paddingTop: '95%',
   },
   clickable: {
     '&:hover': {
-      borderColor: 'steelblue',
+      borderColor: theme.palette.primary.main,
     },
   },
   container: {
@@ -36,9 +35,17 @@ const useStyles = makeStyles((theme) => ({
       padding: '0',
     },
   },
-  email: {
-    typography: {
-      fontFamily: ['Bradley Hand', 'cursive'],
+  contacts: {
+    height: '100%',
+    fontFamily: ['Bradley Hand', 'cursive'],
+    lineHeight: 1,
+  },
+  contactsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    '&:last-child': {
+      paddingBottom: '16px !important',
     },
   },
   header: {
@@ -51,8 +58,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   paragraph: {
-    color: 'white',
     padding: '16px',
+    color: 'white',
   },
   picture: {
     width: '100%',
@@ -61,14 +68,16 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: '10px',
     left: '10px',
-    height: '278px',
+    height: '300px',
     width: '250px',
   },
   subtitle: {
-    color: '#B0C4DE',
+    color: 'secondary',
+    fontFamily: ['Courier', 'monospace'],
   },
   title: {
-    color: 'steelblue',
+    color: 'primary',
+    fontFamily: ['Courier', 'monospace'],
   },
 }));
 

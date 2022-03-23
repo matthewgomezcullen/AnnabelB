@@ -15,21 +15,27 @@ const ProfilePicture = () => {
       className={classes.profilePicture}
       disableGutters="true"
     >
-      <Card className={`${classes.card} ${classes.picture}`}>
+      <Card
+        className={`${classes.card} ${classes.picture}`}
+        variant="outline"
+      >
         <CardMedia
           className={classes.cardMedia}
           image="https://source.unsplash.com/random"
         />
         <CardContent
-          className={`${classes.cardContent} ${classes.email}`}
+          className={classes.contactsContainer}
           align="center"
         >
           <Typography
             variant="subtitle1"
             align="center"
-            className={classes.subtitle}
+            className={`${classes.subtitle} ${classes.contacts}`}
+            color="primary"
           >
-            example@email.com
+            a@annabel.la
+            <br />
+            07711169111
           </Typography>
         </CardContent>
       </Card>
