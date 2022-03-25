@@ -10,6 +10,25 @@ import useStyles from '../styles';
 
 const ProfilePicture = () => {
   const classes = useStyles();
+
+  const [profile, setProfile] = useState({});
+
+  useEffect(() => {
+    const getProfile = async () => {
+      const data = await fetchProfile();
+      setProfile(data);
+    };
+    getProfile();
+  }, []);
+
+  const fetchProfile = async() => {
+    const res = await fetch(
+      `/api/profile`
+    );
+    const data = await res.json();
+    return data;
+  }
+
   return (
     <Container
       className={classes.profilePicture}
@@ -21,7 +40,7 @@ const ProfilePicture = () => {
       >
         <CardMedia
           className={classes.cardMedia}
-          image="https://source.unsplash.com/random"
+          image={profile.profile_pic}
         />
         <CardContent
           className={classes.contactsContainer}
@@ -33,9 +52,9 @@ const ProfilePicture = () => {
             className={`${classes.subtitle} ${classes.contacts}`}
             color="primary"
           >
-            a@annabel.la
+            {profile.email}
             <br />
-            07711169111
+            {profile.phone_number}
           </Typography>
         </CardContent>
       </Card>

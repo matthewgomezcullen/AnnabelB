@@ -2,8 +2,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
-from .models import Heading, Product
-from .serializer import HeadingSerializer, ProductSerializer
+from .models import Heading, Product, Profile
+from .serializer import HeadingSerializer, ProductSerializer, ProfileSerializer
 from api import serializer
 
 # Create your views here.
@@ -44,3 +44,11 @@ class ShowProduct(APIView):
         return Response(data, status=status.HTTP_200_OK)
 
 
+class ShowProfile(APIView):
+    def get(self, request):
+        if len(Profile.objects.all()) > 0:
+            profile = Profile.objects.first()
+        else:
+            profile = Profile()
+        data = ProfileSerializer(profile).data
+        return Response(data, status=status.HTTP_200_OK)

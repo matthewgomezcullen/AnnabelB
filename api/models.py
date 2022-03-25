@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -19,6 +20,18 @@ class Product(models.Model):
     secondary_image_1 = models.ImageField(upload_to="images/products/secondary", blank = True, null = True)
     secondary_image_2 = models.ImageField(upload_to="images/products/secondary", blank = True, null = True)
     secondary_image_3 = models.ImageField(upload_to="images/products/secondary", blank = True, null = True)
+    
+    def __str__(self) -> str:
+        return self.name
+
+
+
+class Profile(models.Model):
+
+    name = models.CharField(max_length=30, blank = True)
+    phone_number = models.CharField(max_length=30, blank = True)
+    email = models.EmailField(max_length=30, blank = True)
+    profile_pic = models.ImageField(upload_to="images/profile", blank = True, null = True)
     
     def __str__(self) -> str:
         return self.name
