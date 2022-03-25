@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import useStyles from '../styles';
+import { useState, useEffect } from 'react';
 
 const ProfilePicture = () => {
   const classes = useStyles();
@@ -21,13 +22,11 @@ const ProfilePicture = () => {
     getProfile();
   }, []);
 
-  const fetchProfile = async() => {
-    const res = await fetch(
-      `/api/profile`
-    );
+  const fetchProfile = async () => {
+    const res = await fetch(`/api/profile`);
     const data = await res.json();
     return data;
-  }
+  };
 
   return (
     <Container
