@@ -15,7 +15,7 @@ In a second terminal, navigate to /frontend and run 'npm run dev' to update chan
 ### Running locally in production
 
 Run 'pip install whitenoise'  
-Run 'export DJANGO_SETTINGS_MODULE="AnnabelB.settings.prod'
+Run 'export DJANGO_SETTINGS_MODULE="AnnabelB.settings.prod'  
 Run 'export DJANGO_SECRET_KEY=**50_random_characters**  
 Navigate to /frontend and run 'npm run build'  
 Uncomment the first two lines in MIDDLEWARE, settings.py  
