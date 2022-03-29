@@ -1,7 +1,9 @@
 # Annabel-B
 
 Source code for Annabel B. website  
-First, activate the virtual environment with 'source myenv/Scripts/activate'. Then:
+First, create the virtual environment with python -m venv myenv  
+Install the requirements using pip install -r requirements.txt  
+Activate the environment with 'source myenv/Scripts/activate'. Then:  
 
 ### Running locally in development
 
