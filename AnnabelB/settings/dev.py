@@ -10,3 +10,13 @@ SECRET_KEY = 'django-insecure-!db9@w)6-v(1_)u4@%cnp)=#me8y40ch%&#4v3l+1j-np7o!%e
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+MIDDLEWARE = [
+  'django.middleware.security.SecurityMiddleware',
+  'django.contrib.sessions.middleware.SessionMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.middleware.csrf.CsrfViewMiddleware',
+  'django.contrib.auth.middleware.AuthenticationMiddleware',
+  'django.contrib.messages.middleware.MessageMiddleware',
+  'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
