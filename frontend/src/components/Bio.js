@@ -2,9 +2,11 @@ import { Box, Container, Typography } from '@material-ui/core';
 import React from 'react';
 import useStyles from '../styles';
 import ProfilePicture from './ProfilePicture';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Bio = () => {
   const classes = useStyles();
+  const matches = useMediaQuery('(max-width: 800px)');
   const paragraphs = [
     'The sun-soaked shores of Naxos in Greece first inspired Annabel to create jewellery. Her flair for making tactile, beautiful pieces continues to be inspired by the sea and sand’s unique sensation on the skin. Jewellery is more than accessory, Annabel believes, and can almost be considered part of the body. Her own hands are a case in point – across a career spanning 30 years Annabel has worn rings on every finger without fail.',
     'The fluid nature of where jewellery ends and the body begins is evident in Annabel’s range of pieces designed to be worn in non-traditional positions – such as bangles that bridge the hand and sit above the elbow. Rings that rest on the upper finger and that bring life to toes are another specialism.',
@@ -16,7 +18,7 @@ const Bio = () => {
 
   return (
     <>
-      <ProfilePicture />
+      {!matches && <ProfilePicture small={matches} />}
       <Container maxWidth="md" disableGutters="true">
         <Box
           sx={{ borderRadius: 6 }}
@@ -30,6 +32,7 @@ const Bio = () => {
           ))}
         </Box>
       </Container>
+      {matches && <ProfilePicture small={matches} />}
     </>
   );
 };

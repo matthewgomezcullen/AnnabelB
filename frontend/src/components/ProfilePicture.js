@@ -9,9 +9,8 @@ import React from 'react';
 import useStyles from '../styles';
 import { useState, useEffect } from 'react';
 
-const ProfilePicture = () => {
+const ProfilePicture = ({ small }) => {
   const classes = useStyles();
-
   const [profile, setProfile] = useState({});
 
   useEffect(() => {
@@ -30,7 +29,9 @@ const ProfilePicture = () => {
 
   return (
     <Container
-      className={classes.profilePicture}
+      className={
+        small ? classes.profilePictureSmall : classes.profilePicture
+      }
       disableGutters="true"
     >
       <Card
