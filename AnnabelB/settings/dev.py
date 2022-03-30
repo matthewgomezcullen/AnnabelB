@@ -4,7 +4,7 @@ SECRET_KEY = 'django-insecure-!db9@w)6-v(1_)u4@%cnp)=#me8y40ch%&#4v3l+1j-np7o!%e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.annabel-b.com']
 
 MIDDLEWARE = [
   'django.middleware.security.SecurityMiddleware',
