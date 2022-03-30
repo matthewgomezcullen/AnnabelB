@@ -1,7 +1,9 @@
 # Annabel-B
 
 Source code for Annabel B. website  
-First, activate the virtual environment with 'source myenv/Scripts/activate'. Then:
+First, create the virtual environment with python -m venv myenv  
+Install the requirements using pip install -r requirements.txt  
+Activate the environment with 'source myenv/Scripts/activate'. Then:  
 
 ### Running locally in development
 
@@ -13,7 +15,7 @@ In a second terminal, navigate to /frontend and run 'npm run dev' to update chan
 ### Running locally in production
 
 Run 'pip install whitenoise'  
-Run 'export DJANGO_SETTINGS_MODULE="AnnabelB.settings.prod'
+Run 'export DJANGO_SETTINGS_MODULE="AnnabelB.settings.prod'  
 Run 'export DJANGO_SECRET_KEY=**50_random_characters**  
 Navigate to /frontend and run 'npm run build'  
 Uncomment the first two lines in MIDDLEWARE, settings.py  
