@@ -71,6 +71,10 @@ const useStyles = makeStyles((theme) => ({
     height: '300px',
     width: '250px',
   },
+  profilePictureSmall: {
+    height: '300px',
+    width: '250px',
+  },
   subtitle: {
     color: 'secondary',
     fontFamily: ['Courier', 'monospace'],
