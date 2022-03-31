@@ -1,2 +1,4 @@
-**/myenv
-**/media 
+myenv
+media 
+db.sqlite3
+staticfiles
