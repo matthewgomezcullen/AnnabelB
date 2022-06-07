@@ -2,3 +2,6 @@ myenv
 media 
 db.sqlite3
 staticfiles
+__pycache__/
+.env
+frontend/static/frontend
