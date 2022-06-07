@@ -1,42 +1,34 @@
-import {
-  Typography,
-  AppBar,
-  Toolbar,
-  Container,
-} from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 import React from 'react';
 
 import useStyles from '../styles';
 
 const Header = ({ theme }) => {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <>
-      <Container
-        className={classes.header}
-        maxWidth="xl"
-        height="200px"
-      >
-        <Typography
-          variant="h2"
-          align="center"
-          className={classes.title}
-          color="primary"
-        >
-          annabel b.
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          className={classes.subtitle}
-          color="secondary"
-        >
-          Bespoke Handmade Jewellery
-        </Typography>
-      </Container>
-    </>
-  );
+    return (
+        <>
+            <Container
+                className={classes.header}
+                maxWidth="xl"
+                height="150"
+            >
+                <Container
+                    className={classes.logoContainer}
+                    height="150"
+                    width="400"
+                    align="center"
+                >
+                    <img
+                        src="../static/images/logo.jpg"
+                        alt="Annabel B. logo"
+                        height="150"
+                        width="400"
+                    />
+                </Container>
+            </Container>
+        </>
+    );
 };
 
 export default Header;
