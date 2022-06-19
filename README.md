@@ -30,4 +30,5 @@ Change SECRET_KEY to **50_random_characters**
 Navigate to /frontend and run 'npm run build'  
 Navigate back to the root directory and run 'python manage.py collectstatic'  
 Add the the domain to ALLOWED_APPS  
+Remove comments in wsgi file  
 Run webapp using platform
