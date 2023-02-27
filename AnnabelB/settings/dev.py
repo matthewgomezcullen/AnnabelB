@@ -1,5 +1,5 @@
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'mug@vr)1%%q!95c=^2&glji^yo!(n^^nyb-gd0_2oziz$_4k@3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

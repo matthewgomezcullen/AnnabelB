@@ -7,14 +7,13 @@ from .serializer import HeadingSerializer, ProductSerializer, ProfileSerializer
 from api import serializer
 
 # Create your views here.
-
+ 
 class ShowHeadingList(APIView):
 
     def get(self, request):
         headings = Heading.objects.all()
         data = HeadingSerializer(headings, many=True).data
         return Response(data, status=status.HTTP_200_OK)
-
 
 class ShowProductList(APIView):
     def get(self, request):

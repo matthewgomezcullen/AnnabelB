@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         '&:last-child': {
-            paddingBottom: '16px !important',
+            padding: '0.1em !important',
         },
     },
     header: {
