@@ -32,7 +32,8 @@ const Bio = () => {
           ))}
         </Box>
       </Container>
-      {matches && <ProfilePicture small={matches} />}
+          {matches && <ProfilePicture small={matches} />}
+          {matches && <br></br>}
     </>
   );
 };

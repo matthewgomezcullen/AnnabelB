@@ -71,8 +71,10 @@ const useStyles = makeStyles((theme) => ({
         width: '250px',
     },
     profilePictureSmall: {
+        position: 'relative',
         height: '300px',
         width: '250px',
+        top: '10px',
     },
     subtitle: {
         color: 'secondary',
